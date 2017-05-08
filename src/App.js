@@ -1,22 +1,13 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 import { Text, View } from 'react-native';
+import { connect } from 'react-redux';
+
+import Splashscreen from './splashscreen';
 
 export default class App extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.android.js
-        </Text>
-        <Text style={styles.instructions}>
-          Double tap R on your keyboard to reload,{'\n'}
-          Shake or press menu button for dev menu
-        </Text>
-      </View>
+      <Splashscreen />
     );
   }
 }
@@ -48,9 +39,9 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    onClick: () => {
-      //dispatch(setVisibilityFilter(ownProps.filter))
-    }
+    // onClick: () => {
+    //   dispatch(setVisibilityFilter(ownProps.filter))
+    // }
   }
 }
 

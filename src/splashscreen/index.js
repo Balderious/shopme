@@ -1,10 +1,14 @@
-import React, { Component, Dimensions } from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { View } from 'react';
 
-const { width, height } = Dimensions.get('window');
+//const { width, height } = Dimensions.get('window');
 
 class Splashscreen extends Component {
+
+  componentDidMount() {
+    setTimeout(function(){ alert("Hello world !"); }, 3000);
+  }
 
   render () {
     <View>
@@ -12,7 +16,6 @@ class Splashscreen extends Component {
       <Text>Quel plaisir de vous revoir !</Text>
     </View>
   }
-
 }
 
 const bindActions = (dispatch) => {
